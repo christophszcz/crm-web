@@ -5,7 +5,7 @@ require 'sinatra'
 $rolodex= Rolodex.new
 
 # Temporary fake data so that we always find contact with id 1000.
-$rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
+# $rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
 
 get '/' do
 	@crm_app_name = "My CRM"
@@ -70,3 +70,5 @@ delete "/contacts/:id" do
     raise Sinatra::NotFound
   end
 end
+
+

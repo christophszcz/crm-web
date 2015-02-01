@@ -1,18 +1,22 @@
 <header>
 	<h1>All Contacts</h1>
 </header>
-<div id= "content">
-	
+
 	<nav>
 		<ul>
 			  <% $rolodex.contacts.each do |contact| %>
-			    <li><%= contact.first_name %> <%= contact.last_name %>
+			    <li><a href="/contacts/<%= contact.id %>">
+			    <%= contact.first_name %> <%= contact.last_name %> </a>
 					<%= contact.email %> <%= contact.note %>
 			    </li>
-			  <% end %>
+			  <% end %>			
 		</ul>
 	</nav>
+		 
 
+					
+
+ 
 
 
 
